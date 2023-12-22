@@ -1,0 +1,34 @@
+アルゴリズム・考える事
+①全探索(forループ、bit全探索、順列探索)
+②データ構造(set, defaultdict, heapq(リストを動的に変化させる時に有効))
+③累積和
+④動的計画法(①表を書く②分かる箇所から埋める、添え字付きDP)
+⑤不変量、周期性、上界を考える
+⑥グラフ問題(BFS(キュー), DFS() -> スタックなどで再帰を回避する)
+⑦半分全列挙(４つの変数があるとき、２つを合成することで計算量を短縮する)
+⑧heapqにハッシュテーブルを追加することで O(1) で値の削除(hash[i]=False)
+をしたとみなせる
+⑨直感に頼った貪欲は危険！！！
+
+
+Tips
+①小数点絡みの問題は素直に計算する方法は避ける（誤差などややこしい）
+　　→ 別のアルゴリズム(dpなど)で解けないか考える
+
+4.再帰の上限を設定(通常実行環境では1000になっている←競プロでは足りない！)
+import sys
+sys.setrecursionlimit(10**8)
+
+5.転倒数
+バブルソートの交換回数(=ソート済みから元の数列に戻すときの回数)
+
+6. 辞書型defaultdictはvalueにリストを持つこともできる
+(ex) A = defaultdict(list);   A[x].append(2);   A[x].append(3);
+
+7. 小数点表示
+print("{:.10f}".format(ans))
+
+8. sortedcontainers
+from sortedcontainers import SortedSet, SortedList, SortedDict
+順序付きで要素削除、追加、参照がO(logN)で出来る
+

@@ -1,0 +1,7 @@
+<<< mod上での和・差・積 >>>
+(a + b) mod M ≡ (a mod M) + (b mod M)
+(a - b) mod M ≡ (a mod M) - (b mod M)
+(a * b) mod M ≡ (a mod M) * (b mod M)
+
+割り算については次式が成り立つ　b^{-1}をbの逆元と呼ぶ
+　　　　　　　a / b ≡ a * b^{-1}
